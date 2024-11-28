@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <style>
+      /* General Body Styles */
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f4f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Invitation Card Styles */
+      .wedding-invite {
+        max-width: 600px;
+        padding: 30px;
+        background: url("téléchargement (8).jpg") no-repeat center;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: #3d3d3d;
+      }
+
+      .header {
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .title {
+        font-family: "Dancing Script", cursive;
+        font-weight: 300;
+        font-size: 80px;
+        margin: 20px 0;
+        color: #3d3d3d;
+      }
+
+      .names {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px 0;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .and {
+        font-family: "Dancing Script", cursive;
+        font-size: 18px;
+        font-weight: normal;
+        color: #555;
+      }
+
+      .invitation-text {
+        font-style: italic;
+        font-size: 14px;
+        margin: 20px 0;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      .details {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        margin-top: 20px;
+        line-height: 1.5;
+        color: #555;
+        font-style: italic;
+      }
+
+      /* Animation styles */
+      .animated {
+        opacity: 0;
+        transform: translateY(-10px); /* Subtle upward animation */
+        transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth fade-in */
+      }
+
+      .animated.visible {
+        opacity: 1;
+        transform: translateY(0); /* Reset position */
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Dancing+Script:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wedding-invite">
+      <p class="header">TOGETHER WITH THEIR FAMILIES</p>
+      <h1 class="title animated">We do</h1>
+      <p class="names animated">
+        <span>KORINA THOMPSON</span> <br />
+        <span class="and">and</span> <br />
+        <span>ALFREDO TORRES</span>
+      </p>
+      <p class="invitation-text animated">
+        Invite you to <br />
+        celebrate their marriage
+      </p>
+      <p class="details animated">
+        SATURDAY, 24TH OF AUGUST <br />
+        Twenty twenty two, at 2 O'Clock <br />
+        123 Anywhere St, Any City, ST 12345
+      </p>
+    </div>
+
+    <script>
+      // JavaScript to animate elements when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(".animated");
+
+        // Apply staggered animation with a fade-in effect
+        animatedElements.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("visible");
+          }, index * 300); // Stagger the animations by 300ms intervals
+        });
+      });
+    </script>
+  </body>
+</html>
